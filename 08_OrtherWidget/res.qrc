@@ -1,0 +1,7 @@
+<RCC>
+    <qresource prefix="/">
+        <file>Camera Roll/aaa.jpg</file>
+        <file>Camera Roll/bbb.jpg</file>
+        <file>Camera Roll/giphy.gif</file>
+    </qresource>
+</RCC>
