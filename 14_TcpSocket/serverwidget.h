@@ -2,9 +2,8 @@
 #define SERVERWIDGET_H
 
 #include <QWidget>
-#include<QTcpServer>//监听套接字
-#include<QTcpSocket>//通信套接字
-
+#include<QTcpServer>
+#include<QTcpSocket>
 
 QT_BEGIN_NAMESPACE
 namespace Ui { class ServerWidget; }
@@ -19,9 +18,9 @@ public:
     ~ServerWidget();
 
 private slots:
-    void on_ButtonSend_clicked();
+    void on_buttonSend_clicked();
 
-    void on_ButtonClose_clicked();
+    void on_buttonClose_clicked();
 
 private:
     Ui::ServerWidget *ui;

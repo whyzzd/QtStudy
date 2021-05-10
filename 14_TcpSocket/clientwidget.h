@@ -16,15 +16,15 @@ public:
     ~ClientWidget();
 
 private slots:
-    void on_Buttonconnect_clicked();
+    void on_buttonConnect_clicked();
 
-    void on_Buttonsnd_clicked();
+    void on_buttonSend_clicked();
 
-    void on_Buttonclose_clicked();
+    void on_buttonClose_clicked();
 
 private:
     Ui::ClientWidget *ui;
-    QTcpSocket *tcpsocket;
+    QTcpSocket *tcpSocket;
 };
 
 #endif // CLIENTWIDGET_H

@@ -6,15 +6,17 @@ ClientWidget::ClientWidget(QWidget *parent) :
     ui(new Ui::ClientWidget)
 {
     ui->setupUi(this);
-    tcpsocket=NULL;
-    tcpsocket=new QTcpSocket(this);
-
-    //从tcpsocket当中读取
-    connect(tcpsocket,&QTcpSocket::readyRead,[=](){
-        QByteArray strread=tcpsocket->readAll();
-        ui->textEditread->append(strread);
+    setWindowTitle("客户端");
+    tcpSocket=NULL;
+    tcpSocket=new QTcpSocket(this);
+    connect(tcpSocket,&QTcpSocket::connected,[=](){
+        ui->textEditRead->setText(QString("连接服务器成功！"));
     });
 
+    connect(tcpSocket,&QTcpSocket::readyRead,[=](){
+        QByteArray arr= tcpSocket->readAll();
+        ui->textEditRead->append(arr);
+    });
 }
 
 ClientWidget::~ClientWidget()
@@ -22,43 +24,28 @@ ClientWidget::~ClientWidget()
     delete ui;
 }
 
-void ClientWidget::on_Buttonconnect_clicked()
+void ClientWidget::on_buttonConnect_clicked()
 {
-    //获取服务器端口及ip
+
     qint16 port=ui->lineEdit->text().toInt();
-    QString ip=ui->lineEdit_2->text();
-
-    tcpsocket->connectToHost(QHostAddress(ip),port);
-
-    //提示客户端已经连接到服务器,当连接上服务器之后会自动触发connected
-    connect(tcpsocket,&QTcpSocket::connected,[=](){
-        ui->textEditread->setText("成功连接到服务器");
-    });
-
+    QString ip = ui->lineEdit_2->text();
+    tcpSocket->connectToHost(QHostAddress(ip),port);
 }
 
-void ClientWidget::on_Buttonsnd_clicked()
+void ClientWidget::on_buttonSend_clicked()
 {
-    if(tcpsocket==NULL)
+    if(!tcpSocket->isOpen())
         return;
-    //获取文字
-    QString str=ui->textEditwrite->toPlainText();
-
-    //往套接字里面写文字
-    tcpsocket->write(str.toUtf8().data());
-
-
+    QString str=ui->textEditWrite->toPlainText();
+    tcpSocket->write(str.toUtf8().data());
+    ui->textEditWrite->clear();
 }
 
-void ClientWidget::on_Buttonclose_clicked()
+void ClientWidget::on_buttonClose_clicked()
 {
-    if(tcpsocket==NULL)
-    {
+    if(!tcpSocket->isOpen())
         return;
-    }
+    tcpSocket->disconnectFromHost();
+    tcpSocket->close();
 
-    tcpsocket->disconnectFromHost();
-    tcpsocket->close();
-
-    tcpsocket=NULL;
 }

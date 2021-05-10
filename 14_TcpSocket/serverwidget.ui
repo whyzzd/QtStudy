@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>503</width>
-    <height>385</height>
+    <width>489</width>
+    <height>279</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -25,7 +25,7 @@
     <widget class="QTextEdit" name="textEditWrite"/>
    </item>
    <item row="2" column="0">
-    <widget class="QPushButton" name="ButtonSend">
+    <widget class="QPushButton" name="buttonSend">
      <property name="text">
       <string>send</string>
      </property>
@@ -38,14 +38,14 @@
      </property>
      <property name="sizeHint" stdset="0">
       <size>
-       <width>320</width>
+       <width>306</width>
        <height>20</height>
       </size>
      </property>
     </spacer>
    </item>
    <item row="2" column="2">
-    <widget class="QPushButton" name="ButtonClose">
+    <widget class="QPushButton" name="buttonClose">
      <property name="text">
       <string>close</string>
      </property>

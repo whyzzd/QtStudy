@@ -6,31 +6,27 @@ ServerWidget::ServerWidget(QWidget *parent)
     , ui(new Ui::ServerWidget)
 {
     ui->setupUi(this);
-    tcpSocket=NULL;
+
+    setWindowTitle("服务器:8888");
     tcpServer=NULL;
-    tcpServer =new QTcpServer(this);
+    tcpSocket=NULL;
+    tcpServer = new QTcpServer(this);
     tcpServer->listen(QHostAddress::Any,8888);
 
-    setWindowTitle("服务器：8888");
-
-
     connect(tcpServer,&QTcpServer::newConnection,[=](){
-        //取出建立好链接的套接字
         tcpSocket=tcpServer->nextPendingConnection();
-
-        //获取对方的ip端口
-        QString ip=tcpSocket->peerAddress().toString();
+        QString ip = tcpSocket->peerAddress().toString();
         qint16 port = tcpSocket->peerPort();
 
-        QString temp=QString("[%1：%2]:成功连接").arg(ip).arg(port);
+        QString str=QString("[%1:%2]:连接成功").arg(ip).arg(port);
+        ui->textEditRead->setText(str);
 
-        ui->textEditRead->setText(temp);
-
-        //读取消息
         connect(tcpSocket,&QTcpSocket::readyRead,[=](){
-            QByteArray array = tcpSocket->readAll();
-            ui->textEditRead->append(array);
+            QByteArray arr =tcpSocket->readAll();
+            ui->textEditRead->append(arr);
         });
+
+
     });
 }
 
@@ -40,22 +36,22 @@ ServerWidget::~ServerWidget()
 }
 
 
-void ServerWidget::on_ButtonSend_clicked()
+void ServerWidget::on_buttonSend_clicked()
 {
     if(tcpSocket==NULL)
-    return;
-    //获取编辑区的内容
+    {
+        return;
+    }
     QString str=ui->textEditWrite->toPlainText();
-    //给对方发送数据
     tcpSocket->write(str.toUtf8().data());
+    ui->textEditWrite->clear();
 }
 
-void ServerWidget::on_ButtonClose_clicked()
+void ServerWidget::on_buttonClose_clicked()
 {
     if(tcpSocket==NULL)
-    return;
+        return;
     tcpSocket->disconnectFromHost();
     tcpSocket->close();
-
     tcpSocket=NULL;
 }
