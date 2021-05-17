@@ -36,7 +36,7 @@
       </rect>
      </property>
      <property name="currentIndex">
-      <number>1</number>
+      <number>2</number>
      </property>
      <widget class="QWidget" name="tab">
       <attribute name="title">
@@ -73,8 +73,8 @@
        <rect>
         <x>0</x>
         <y>0</y>
-        <width>111</width>
-        <height>113</height>
+        <width>100</width>
+        <height>30</height>
        </rect>
       </property>
       <attribute name="label">
@@ -100,7 +100,7 @@
         <x>0</x>
         <y>0</y>
         <width>111</width>
-        <height>113</height>
+        <height>89</height>
        </rect>
       </property>
       <attribute name="label">
@@ -121,6 +121,14 @@
       </widget>
      </widget>
      <widget class="QWidget" name="page_3">
+      <property name="geometry">
+       <rect>
+        <x>0</x>
+        <y>0</y>
+        <width>100</width>
+        <height>30</height>
+       </rect>
+      </property>
       <attribute name="label">
        <string>伙伴</string>
       </attribute>
@@ -157,9 +165,9 @@
       <property name="geometry">
        <rect>
         <x>0</x>
-        <y>-45</y>
-        <width>172</width>
-        <height>244</height>
+        <y>0</y>
+        <width>174</width>
+        <height>282</height>
        </rect>
       </property>
       <layout class="QVBoxLayout" name="verticalLayout">
