@@ -14,4 +14,8 @@
 - [12_QtPaintDevice](https://github.com/whyzzd/QtStudy/tree/master/12_QtPaintDevice)(绘图设备的使用)
 - [13_Qt_QFile](https://github.com/whyzzd/QtStudy/tree/master/13_Qt_QFile)(显示文件信息)
 - [14_TcpSocket](https://github.com/whyzzd/QtStudy/tree/master/14_TcpSocket)(利用Tcp实现两个窗口的通信，服务器和客户端相互传递消息)
+- [15_16_16QFileSystemModel](https://github.com/whyzzd/QtStudy/tree/master/15_QFileSystemModel)(实现系统目录文件浏览器，增加预览文本，打开exe文件)
+- [17_FormToForm](https://github.com/whyzzd/QtStudy/tree/master/17_FormToForm)(实现三个窗口之间进行互相切换，中间类中使用static来实现窗口的唯一性)
+- [18_namespaceUi](https://github.com/whyzzd/QtStudy/tree/master/18_namespaceUi)(模仿Qt中namespace Ui{}小demo)
+
 
