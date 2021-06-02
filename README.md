@@ -18,5 +18,8 @@
 - [17_FormToForm](https://github.com/whyzzd/QtStudy/tree/master/17_FormToForm)(实现三个窗口之间进行互相切换，中间类中使用static来实现窗口的唯一性)
 - [18_namespaceUi](https://github.com/whyzzd/QtStudy/tree/master/18_namespaceUi)(模仿Qt中namespace Ui{}小demo)
 - [19_Shape](https://github.com/whyzzd/QtStudy/tree/master/19_Shape)(不规则窗体)
+- [20_Chess](https://github.com/whyzzd/QtStudy/tree/master/20_Chess)(画棋盘，以及单个棋子的移动)
+- [21_Udp](https://github.com/whyzzd/QtStudy/tree/master/21_Udp)(两窗口Udp通信及组播)
+- [22_Thread](https://github.com/whyzzd/QtStudy/tree/master/22_Thread)(子线程让计时器停止)
 
 
