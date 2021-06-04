@@ -20,6 +20,6 @@
 - [19_Shape](https://github.com/whyzzd/QtStudy/tree/master/19_Shape)(不规则窗体)
 - [20_Chess](https://github.com/whyzzd/QtStudy/tree/master/20_Chess)(画棋盘，以及单个棋子的移动)
 - [21_Udp](https://github.com/whyzzd/QtStudy/tree/master/21_Udp)(两窗口Udp通信及组播)
-- [22_Thread](https://github.com/whyzzd/QtStudy/tree/master/22_Thread)(子线程让计时器停止)
+- [22_Thread](https://github.com/whyzzd/QtStudy/tree/master/22_Thread)(1.继承线程类方式：子线程让计时器停止  2.自定义类放入线程方式：子线程让计时器停止 3.子线程中画图)
 
 
