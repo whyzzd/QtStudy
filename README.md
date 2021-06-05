@@ -21,5 +21,6 @@
 - [20_Chess](https://github.com/whyzzd/QtStudy/tree/master/20_Chess)(画棋盘，以及单个棋子的移动)
 - [21_Udp](https://github.com/whyzzd/QtStudy/tree/master/21_Udp)(两窗口Udp通信及组播)
 - [22_Thread](https://github.com/whyzzd/QtStudy/tree/master/22_Thread)(1.继承线程类方式：子线程让计时器停止  2.自定义类放入线程方式：子线程让计时器停止 3.子线程中画图)
+- [23_Database](https://github.com/whyzzd/QtStudy/tree/master/23_Database)(1.数据库创建插入删除 2.sqlite数据库的简单使用 3.使用QSqlTableModel模型可视化操作数据库)
 
 

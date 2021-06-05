@@ -57,6 +57,9 @@ FileSystem::~FileSystem()
 
 void FileSystem::on_treeView_clicked(const QModelIndex &index)
 {
+	//测试----------------
+    //qDebug()<<ui->treeView->selectionModel()->currentIndex();
+    //----------------------------
     QString name=m_Model->fileName(index);
     m_FileName->setText("文件名/文件夹名:"+name);
 
