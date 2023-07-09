@@ -43,7 +43,7 @@ void Widget::paintEvent(QPaintEvent *event)
     }
     if(drawPoint.rx()!=-1&&drawPoint.ry()!=-1)
     {
-        painter.drawPixmap(drawPoint.rx(),drawPoint.ry(), one_width,one_height,QPixmap("../Chess/a.png"));
+        painter.drawPixmap(drawPoint.rx(),drawPoint.ry(), one_width,one_height,QPixmap("../20_Chess/a.png"));
     }
 
 

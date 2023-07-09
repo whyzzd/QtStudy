@@ -10,6 +10,9 @@ public:
     explicit MyThread(QObject *parent = nullptr);
     void settoclose(bool value);
 
+private:
+    void mySleep(int ms);
+
 public slots:
     void mytimeout();
 

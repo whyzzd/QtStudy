@@ -26,7 +26,7 @@ void Widget::paintEvent(QPaintEvent *event)
 
     QPainter p;
     p.begin(this);
-    p.drawPixmap(0,0,width(),height(), QPixmap("../Shape/a1.png"));//注意此处的相对路径的写法
+    p.drawPixmap(0,0,width(),height(), QPixmap("../19_Shape/a1.png"));//注意此处的相对路径的写法
     p.end();
 }
 

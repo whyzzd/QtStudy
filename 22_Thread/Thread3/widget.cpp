@@ -32,10 +32,18 @@ Widget::~Widget()
     delete ui;
 }
 
-void Widget::paintEvent(QPaintEvent *)
+void Widget::paintEvent(QPaintEvent *event)
 {
     QPainter p(this);
+
+
+    //const QRect & rect = event->rect();
+
+//    p.setRenderHint(QPainter::Antialiasing);
+
     p.drawImage(100,100,m_image);
+
+
 }
 
 

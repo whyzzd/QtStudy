@@ -21,6 +21,8 @@ private slots:
 
     void on_pushButton_2_clicked();
 
+    void stopThreadSlots();
+
 private:
     Ui::Widget *ui;
     QTimer *timer;

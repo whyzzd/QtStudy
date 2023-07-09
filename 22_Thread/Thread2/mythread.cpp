@@ -13,11 +13,21 @@ void MyThread::mytimeout()
         if(toclose)return;
 
         emit changesignal();
-        _sleep(1000);
+
+        mySleep(1000);
         qDebug()<<"子线程号："<<QThread::currentThread();
     }
 }
 void MyThread::settoclose(bool value)
 {
     toclose=value;
+}
+void MyThread::mySleep(int ms)
+{
+#ifdef Q_OS_WIN
+    Sleep(uint(ms));
+#else
+    struct timespec ts = { ms / 1000, (ms % 1000) * 1000 * 1000 };
+    nanosleep(&ts, NULL);
+#endif
 }

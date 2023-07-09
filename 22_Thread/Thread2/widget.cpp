@@ -17,7 +17,7 @@ Widget::Widget(QWidget *parent)
     connect(myt,&MyThread::changesignal,this,&Widget::dislcd);
     qDebug()<<"主线程号："<<QThread::currentThread();
 
-    connect(this,&Widget::startmyt,myt,&MyThread::mytimeout);
+    connect(this,&Widget::startmyt,myt,&MyThread::mytimeout,Qt::QueuedConnection);
 
 
     //如果强制推出(即在开启线程之后直接关闭窗口)

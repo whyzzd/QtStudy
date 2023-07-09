@@ -15,9 +15,11 @@ Widget::Widget(QWidget *parent)
     });
     mythread=new MyThread(this);
     //注意：此处第三个参数如果不写会提示，timer无法被其它线程killed
-    connect(mythread,&MyThread::sstop,this,[=](){
-        timer->stop();
-    });
+//    connect(mythread,&MyThread::sstop,this,[=](){
+//        timer->stop();
+//    });
+
+    connect(mythread,&MyThread::sstop,this,&Widget::stopThreadSlots,Qt::QueuedConnection);
 
     connect(this,&Widget::destroyed,[=](){
         mythread->quit();
@@ -40,6 +42,11 @@ void Widget::on_pushButton_clicked()
 }
 
 void Widget::on_pushButton_2_clicked()
+{
+    timer->stop();
+}
+
+void Widget::stopThreadSlots()
 {
     timer->stop();
 }
