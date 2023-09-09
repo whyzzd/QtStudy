@@ -1,0 +1,52 @@
+#pushButton{
+    font-family: "宋体";
+
+}
+#pushButton_2{
+    font-family: Helvetica;
+
+}
+#pushButton_3{
+    font-family: Calibri;
+
+}
+#pushButton_4{
+    font-family: Times New Roman;
+
+}
+#pushButton_5{
+    font-family: Georgia;
+
+}
+
+QLabel[value="red"]{
+    background-color: red;
+    color: black;
+    font-family: "宋体";
+
+}
+
+QLabel[value="green"]{
+    background-color: green;
+    color: black;
+    font-family: Helvetica;
+
+}
+
+QLabel[value="blue"]{
+    background-color: blue;
+    color: black;
+    font-family: Calibri;
+}
+
+QLabel[value="orange"]{
+    background-color: orange;
+    color: black;
+    font-family: Times New Roman;
+}
+
+QLabel[value="yellow"]{
+    background-color: yellow;
+    color: black;
+    font-family: Georgia;
+}
