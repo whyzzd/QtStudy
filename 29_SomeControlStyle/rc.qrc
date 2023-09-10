@@ -1,0 +1,11 @@
+<RCC>
+    <qresource prefix="/">
+        <file>styles.qss</file>
+        <file>image/switch_off.png</file>
+        <file>image/switch_on.png</file>
+        <file>image/radiobutton_checked.png</file>
+        <file>image/radiobutton_unchecked.png</file>
+        <file>image/checkbox_checked.png</file>
+        <file>image/checkbox_unchecked.png</file>
+    </qresource>
+</RCC>

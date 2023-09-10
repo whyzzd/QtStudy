@@ -1,0 +1,81 @@
+QPushButton{
+    /*font-family: "Segoe UI";
+    background-color: #666666;*/
+
+    background-color: #3498db;
+    color: #fff;
+    border: none;
+    border-radius: 3px;
+    padding: 5px 10px;
+}
+
+QPushButton:hover{
+    /*background-color: #777777;
+    border-color:  #444444;*/
+    background-color: #2980b9;
+
+}
+
+QPushButton:pressed {
+    background-color: #888888;
+    border-color: #333333;
+    color: white;
+}
+QPushButton:disabled {
+    color: #333333;
+}
+
+/*#pushButton{
+    border:2px solid #333333;
+
+    border-radius:5px;
+
+    /*background:cyan;*/
+}
+#pushButton2{
+    border:2px ridge yellow;
+    border-radius:7px;
+}
+*/
+#Widget QGroupBox
+{
+    background-color: #ecf0f1;
+    border: 1px solid #bdc3c7;
+    border-radius: 5px;
+    padding: 5px;
+}
+
+#groupBox_2 QRadioButton
+{
+
+    spacing: 2px;
+}
+
+#groupBox_2 QRadioButton::indicator{
+    width: 25px;
+    height: 25px;
+}
+
+#groupBox_2 QRadioButton::indicator:unchecked {
+    image: url(:/image/radiobutton_unchecked.png);
+}
+
+#groupBox_2 QRadioButton::indicator::checked {
+    image: url(:/image/radiobutton_checked.png);
+}
+
+
+#groupBox_3 QCheckBox{
+    spacing: 8px;
+}
+#groupBox_3 QCheckBox::indicator{
+    width: 60px;
+    height: 60px;
+}
+#groupBox_3 QCheckBox::indicator:unchecked{
+    image: url(:/image/checkbox_unchecked.png);
+}
+#groupBox_3 QCheckBox::indicator:checked {
+    image: url(:/image/checkbox_checked.png);
+}
+
