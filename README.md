@@ -28,4 +28,5 @@
 - [27_QTranslator](https://github.com/whyzzd/QtStudy/tree/master/27_QTranslator)(QTranslator，实时进行切换翻译)
 - [28_DynamicAttributeStyle](https://github.com/whyzzd/QtStudy/tree/master/28_DynamicAttributeStyle)(QSS中使用动态属性设置效果)
 - [29_SomeControlStyle](https://github.com/whyzzd/QtStudy/tree/master/29_SomeControlStyle)(一些控件的样式效果)
+- [30_QTableWidgetDelegate](https://github.com/whyzzd/QtStudy/tree/master/30_QTableWidgetDelegate)(在QTableWidget中添加SpinBox)
 
