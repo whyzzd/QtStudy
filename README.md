@@ -26,4 +26,5 @@
 - [25_TcpInfoTrans](https://github.com/whyzzd/QtStudy/tree/master/25_TcpInfoTrans)(Tcp信息传输)
 - [26_Table](https://github.com/whyzzd/QtStudy/tree/master/26_Table)(QTable的简单使用)
 - [27_QTranslator](https://github.com/whyzzd/QtStudy/tree/master/27_QTranslator)(QTranslator，实时进行切换翻译)
+- [28_DynamicAttributeStyle](https://github.com/whyzzd/QtStudy/tree/master/28_DynamicAttributeStyle)(QSS中使用动态属性设置效果)
 
